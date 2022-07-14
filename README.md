@@ -12,7 +12,7 @@
 
 ### Part A
 * Create a program called *json_helper.py*
-* Define a function called *read_json*. Given a string representing a file path to a json file, this function should open said file and convert its contens into a json object.
+* Define a function called *read_json*. Given a string representing a file path to a json file, this function should open said file and convert its contents into a json object.
 * The json object should be returned.
 
 ### Part B
