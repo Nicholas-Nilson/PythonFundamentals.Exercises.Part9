@@ -6,11 +6,6 @@ def read_json(file_path):
     data = json.loads(file.read())
     return data
 
-def write_pickle(file_path, data_to_pickle):
-
-    with open(file_path + '/super_smash_characters.pickle', 'wb') as f:
-        pickle.dump(data_to_pickle, f)
-
 
 #return a list w/ json objects
 # def read_all_json_files(file_path):
@@ -38,12 +33,28 @@ def read_all_json(dirName):
             json_files = json_files + read_all_json(fullPath)
         elif '.json' in entry:
             json_files.append(read_json(fullPath))
-
     return json_files
 
+
+def write_pickle(file_path, data_to_pickle):
+    with open(file_path + '/super_smash_characters.pickle', 'wb') as f:
+        pickle.dump(data_to_pickle, f)
+
+
+def load_pickle(file_path):
+    pickle_data = []
+    with open(file_path, 'rb') as f:
+        while True:
+            try:
+                pickle_data.append(pickle.load(f))
+            except EOFError:
+                break
+    return pickle_data
 
 file_path = '/Users/nick/Python/Labs/PythonFundamentals.Exercises.Part9/data'
 # print(read_all_json_files(file_path))
 data = read_all_json(file_path)
 pickle_path = "/Users/nick/Python/Labs/PythonFundamentals.Exercises.Part9/data/super_smash_bros"
 write_pickle(pickle_path, data)
+pickle_name = "/Users/nick/Python/Labs/PythonFundamentals.Exercises.Part9/data/super_smash_bros/super_smash_characters.pickle"
+print(load_pickle(pickle_name))
