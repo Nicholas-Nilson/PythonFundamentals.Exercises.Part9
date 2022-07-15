@@ -51,6 +51,13 @@ def load_pickle(file_path):
                 break
     return pickle_data
 
+
+data_to_write = {"name:": "Goku", "race": "Saiyan", "Family": "ChiChi and Gohan", "hype move": "spirit bomb"}
+path_to_write = '/Users/nick/Python/Labs/PythonFundamentals.Exercises.Part9/data/dragon_ball_z/'
+
+with open(path_to_write + 'Goku.json', 'w') as file_to_write:
+    json.dump(data_to_write, file_to_write)
+
 file_path = '/Users/nick/Python/Labs/PythonFundamentals.Exercises.Part9/data'
 # print(read_all_json_files(file_path))
 data = read_all_json(file_path)
