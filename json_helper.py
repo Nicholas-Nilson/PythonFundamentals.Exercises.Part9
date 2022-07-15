@@ -54,7 +54,7 @@ def read_all_json(dirName):
 
 
 def write_pickle(file_path, file_name, data_to_pickle):
-    with open(file_path + str(file_name), 'wb') as f:
+    with open(file_path + '/xx' + str(file_name), 'wb') as f:
         pickle.dump(data_to_pickle, f)
 
 
@@ -80,11 +80,11 @@ with open(path_to_write + 'Goku.json', 'w') as file_to_write:
 
 file_path = '/Users/nick/Python/Labs/PythonFundamentals.Exercises.Part9/data'
 # print(read_all_json_files(file_path))
-data = read_all_json(file_path)
-pickle_path = "/Users/nick/Python/Labs/PythonFundamentals.Exercises.Part9/data/super_smash_bros"
-write_pickle(pickle_path, data)
-pickle_name = "/Users/nick/Python/Labs/PythonFundamentals.Exercises.Part9/data/super_smash_bros/super_smash_characters.pickle"
-print(load_pickle(pickle_name))
+# data = read_all_json(file_path)
+# pickle_path = "/Users/nick/Python/Labs/PythonFundamentals.Exercises.Part9/data/super_smash_bros"
+# write_pickle(pickle_path, data)
+# pickle_name = "/Users/nick/Python/Labs/PythonFundamentals.Exercises.Part9/data/super_smash_bros/super_smash_characters.pickle"
+# print(load_pickle(pickle_name))
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
