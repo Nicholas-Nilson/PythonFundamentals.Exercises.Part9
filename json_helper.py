@@ -41,7 +41,7 @@ def read_all_json(dirName):
     # create a list of file and sub directories
     # names in the given directory
     list_of_files = os.listdir(dirName)
-    json_files = list[]
+    json_files = []
     # Iterate over all the entries
     for entry in list_of_files:
         # Create full path
