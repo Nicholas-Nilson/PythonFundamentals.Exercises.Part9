@@ -36,11 +36,12 @@ def get_pickle_title(file_path):
 #     return list_of_jsons
 
 
+
 def read_all_json(dirName):
     # create a list of file and sub directories
     # names in the given directory
     list_of_files = os.listdir(dirName)
-    json_files = list()
+    json_files = list[]
     # Iterate over all the entries
     for entry in list_of_files:
         # Create full path
@@ -54,7 +55,7 @@ def read_all_json(dirName):
 
 
 def write_pickle(file_path, file_name, data_to_pickle):
-    with open(file_path + '/xx' + str(file_name), 'wb') as f:
+    with open(file_path + '/' + str(file_name), 'wb') as f:
         pickle.dump(data_to_pickle, f)
 
 
